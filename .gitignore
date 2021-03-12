@@ -1,0 +1,14 @@
+Authentication
+Creating models
+Creating new vacancies and resumes
+Main menu
+Vacancy and resume pages
+problems
+cd
+course-info.yaml
+course-remote-info.yaml
+task/course-info.yaml
+task/course-remote-info.yaml
+task/db.sqlite3
+task/db.test.sqlite3
+task/tests.py

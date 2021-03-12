@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Main Menu</title>
+</head>
+<body>
+    <h2>Welcome to HyperJob!</h2>
+    <ul>
+        {% for k, v in data.items %}
+            <li>
+                <a href="/{{ v }}">{{ k }}</a>
+            </li>
+        {% endfor %}
+    </ul>
+    <form method="post" action="logout">
+        {% csrf_token %}
+        <button type="submit">Log Out</button>
+    </form>
+</body>
+</html>

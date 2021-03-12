@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% if request.user.is_staff %}
+        <title>Vacancy manager</title>
+    {% else %}
+        <title>Resume manager</title>
+    {% endif %}
+</head>
+<body>
+    {% if request.user.is_staff %}
+        <form method="post" action="/vacancy/new">{% csrf_token %}
+            <label for="description">Vacancy:</label>
+            <input type="text" id="description" name="description">
+            <button type="submit">Add vacancy</button>
+        </form>
+    {% else %}
+        <form method="post" action="/resume/new">{% csrf_token %}
+            <label for="description">Resume:</label>
+            <input type="text" id="description" name="description">
+            <button type="submit">Add resume</button>
+        </form>
+    {% endif %}
+</body>
+</html>
